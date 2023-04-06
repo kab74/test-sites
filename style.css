@@ -1,0 +1,336 @@
+/* BASE STYLES */
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+  font-family: 'Lato', sans-serif ;
+  color: #fff;
+  background-image: url(https://github.com/kab74/hosted-assets/blob/main/college2.jpg?raw=true) ;
+  background-color: rgba(0, 0, 0, 0.7) ;
+  background-blend-mode: darken;
+  background-position-y: -150px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) ;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+/* HEADER */
+
+.header {
+display: flex;
+justify-content: space-between;
+margin-top: 30px;
+animation: fade-in 1s;
+
+}
+
+.logo {
+max-width: 100px;
+max-width: 100px;
+}
+
+.links {
+list-style: none;
+display: flex;
+
+
+}
+
+.link-item {
+margin-right: 25px;
+background-color: black;
+border-radius: 10px;
+align-items: center;
+
+}
+
+.link-item:hover {
+  background-color: red;
+}
+
+.link-item:active {
+  background-color: darkgreen;
+}
+
+.top-link {
+text-decoration: none;
+color: #fff ;
+font-weight: 500;
+font-size: 24px;
+
+transition: all 0.4s;
+
+}
+
+
+/* MAIN CONTENT */
+
+.main {
+text-align: center;
+margin-top: 10px;
+animation: fade-in 1.5s 0.3s backwards;
+}
+
+.center-heading {
+font-size: 4em;
+font-weight: 800;
+margin-bottom: 25px;
+max-width: 650px;
+margin-left: auto;
+margin-right: auto;
+line-height: 0.9;
+}
+
+.center-paragraph {
+font-size: 2em;
+max-width: 600px;
+margin-left: auto;
+margin-right: auto;
+line-height: 1.4;
+}
+
+.text-bold {
+font-weight: 900;
+}
+
+.form {
+margin-top: 25px;
+}
+
+.input {
+width: 525px;
+height: 60px;
+border: none;
+padding: 0px;
+border-radius: 4px;
+opacity: 0.8;
+padding-left: 30px;
+font-size: 20px;
+font: inherit;
+outline: none;
+transition: all 0.8s;
+}
+
+.input:focus {
+  opacity: 1;
+}
+
+.input::placeholder {
+  color: #000;
+}
+
+.btn {
+border: none;
+padding-bottom: 5px;
+background-color: #000;
+height: 60px;
+width: 150px;
+color: #fff;
+font: inherit;
+border-radius: 5px;
+margin-left: 15px;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-size: 20px;
+font-weight: 600;
+transition: all 0.8s;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #161616;
+}
+
+.course-info {
+  font-size: 2rem;
+  color: red;
+  background-color: black;
+  height: 95px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding: 5px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  }
+
+
+/* CODE FOR THE NEW COURSE CARD FLIP ANIMATION */
+
+.flip-card {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  margin-bottom: 80px;
+  }
+
+.card_front {  
+background:url("https://github.com/kab74/hosted-assets/blob/main/engineering1a.jpg?raw=true");
+width: 200px;
+height: 300px;
+ }
+
+.card_fronta {
+background: url("https://github.com/kab74/hosted-assets/blob/main/computers1a.jpg?raw=true");
+width: 200px;
+height: 300px;
+}
+
+
+.card_frontb {
+background: url("https://github.com/kab74/hosted-assets/blob/main/website1a.jpg?raw=true");
+width: 200px;
+height: 300px;
+}
+
+.card_front > *,
+.card_back > * {
+  background-color: white;
+  background-color: rgba(255, 255, 255, 1);  
+} 
+
+.card-front-engineering {
+ color: black;
+ background-color: white;
+ margin: auto;
+ padding: 20px;
+}
+
+.card-back-engineering {
+ color: black;
+ margin: auto;
+ padding-top: 5px;
+ padding-bottom: 5px;
+}
+
+.card-front-computers {
+ color: black;
+ background-color: white;
+ padding: 20px;
+}
+
+.card-back-computers {
+ color: black; 
+ margin: auto;
+ padding-top: 5px;
+ padding-bottom: 5px;
+}
+
+.card-front-website {
+ color: black;
+ background-color: white;
+ padding: 20px;
+}
+
+.card-back-website {
+ color: black;
+ margin: auto;
+ padding-top: 5px;
+ padding-bottom: 5px;
+}
+
+.card-text {
+  color: black;
+  text-align:justify;
+  padding: 8px;
+  border-top: solid 2px;
+}
+
+.card_back {
+background-color: red;
+width: 200px;
+height: 300px;
+padding: 1em;
+  }
+
+
+/* FLIP CARD STYLING */
+
+.container {
+  perspective: 1000px;
+  width: 200px;
+  height: 300px;
+}
+
+.container:hover .card, 
+.container.hover {
+  transform: rotateY(-180deg);
+}
+
+.card {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  width: 200px;
+  height: 300px;
+}
+
+.card_front,
+.card_back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card_front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.card_back {
+  transform: rotateY(-180deg);
+}
+
+
+
+
+.footer {
+display: flex;
+justify-content: space-between;
+width: 1150px;
+margin-left: auto;
+margin-right: auto;
+margin-top: auto;
+font-size: 20px;
+padding: 20px;
+border-top: 4px solid rgba(255, 255, 255, 0.4);
+padding-top: 10px;
+animation: fade-in 1.5s 0.5s backwards;
+}
+
+.copyright {
+padding-right: 200px;
+}
+
+.contact {
+
+}

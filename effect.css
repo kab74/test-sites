@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #FFF;
+  overflow: hidden;
+}
+
+body {
+  position: relative;
+  background: #00222B;
+ 
+}
+
+canvas#canvas {
+  display: block;
+}
+
+.heading-section {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.java-heading {
+  background-color: none;
+  font-size: 4rem;
+  
+}
